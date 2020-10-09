@@ -1,18 +1,18 @@
 import React from "react";
-import { Layout } from "antd";
+import { Layout as MainLayout } from "antd";
 
 // Components
 import SideNav from "./SideNav";
 import MainContent from "./MainContent";
 
-const { Header, Footer } = Layout;
+const { Header, Footer } = MainLayout;
 
-const SiderDemo = ({ children }) => {
+const Layout = ({ children }) => {
 
   return (
-    <Layout style={{ minHeight: "100vh" }}>
+    <MainLayout style={{ minHeight: "100vh" }}>
       <SideNav />
-      <Layout className="site-layout">
+      <MainLayout className="site-layout">
         <Header className="site-layout-background" style={{ padding: 0 }} />
         <MainContent>
             {children}
@@ -21,9 +21,9 @@ const SiderDemo = ({ children }) => {
           <h4>Boilerplate</h4>
           React - Ant Design - Axios - JWT
         </Footer>
-      </Layout>
-    </Layout>
+      </MainLayout>
+    </MainLayout>
   );
 };
 
-export default SiderDemo;
+export default Layout;
