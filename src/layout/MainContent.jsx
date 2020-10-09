@@ -9,8 +9,8 @@ const MainContent = ({ children }) => {
   return (
     <Content style={{ margin: "0 16px" }}>
       <Breadcrumb style={{ margin: "16px 0" }}>
-        <Breadcrumb.Item>User</Breadcrumb.Item>
-        <Breadcrumb.Item>Bill</Breadcrumb.Item>
+        <Breadcrumb.Item>Admin</Breadcrumb.Item>
+        <Breadcrumb.Item>Usuarios</Breadcrumb.Item>
       </Breadcrumb>
       <div
         className="site-layout-background"
