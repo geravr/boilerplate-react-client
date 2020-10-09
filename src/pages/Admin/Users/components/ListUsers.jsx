@@ -24,6 +24,7 @@ const ListUsers = ({
       dataSource={dataUsers}
       rowKey="id"
       pagination={{ total: totalItems, onChange: onChangePagination }}
+      scroll={{x: true}}
     >
       <Table.Column
         title="Username"
