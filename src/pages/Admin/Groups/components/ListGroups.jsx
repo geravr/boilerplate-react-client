@@ -68,7 +68,7 @@ const ListGroups = ({
           <Space size="middle">
             <a
               style={{ color: "#000" }}
-              onClick={() => showModalEdit(id, row.username)}
+              onClick={() => showModalEdit(id, row.name)}
             >
               <EditOutlined style={{ fontSize: "18px", color: "#ffc53d" }} />{" "}
               Editar

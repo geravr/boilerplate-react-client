@@ -12,8 +12,8 @@ import {
   Form,
   Button,
   Input,
-  Switch,
   Select,
+  Skeleton,
 } from "antd";
 
 const EditGroupForm = ({
@@ -73,12 +73,14 @@ const EditGroupForm = ({
 
   return (
     <Modal
-      title={`Editar usuario ${groupToEdit.name}`}
+      title={`Editar grupo ${groupToEdit.name}`}
       visible={modalEditGroup}
       onCancel={handleCancel}
       footer={null}
     >
-      {group && (
+      {!group ? (
+        <Skeleton active paragraph={{ rows: 5 }} />
+      ) : (
         <Form
           labelCol={{ span: 6 }}
           wrapperCol={{ span: 18 }}
