@@ -1,17 +1,16 @@
 import React from "react";
 
+import Breadcrumb from "./Breadcrumb";
+
 // Ant Design
-import { Layout, Breadcrumb } from "antd";
+import { Layout } from "antd";
 
 const { Content } = Layout;
 
-const MainContent = ({ children }) => {
+const MainContent = ({ children, breadcrumb: BreadcrumbComponent }) => {
   return (
     <Content style={{ margin: "0 16px" }}>
-      <Breadcrumb style={{ margin: "16px 0" }}>
-        <Breadcrumb.Item>Admin</Breadcrumb.Item>
-        <Breadcrumb.Item>Usuarios</Breadcrumb.Item>
-      </Breadcrumb>
+      <Breadcrumb />
       <div
         className="site-layout-background"
         style={{ padding: 24, minHeight: 360 }}

@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 // Ant Design
 import { Layout, Menu } from "antd";
 import {
-  PieChartOutlined,
+  HomeOutlined,
   TeamOutlined,
   UserOutlined,
   AppstoreOutlined,
@@ -21,8 +21,8 @@ const SideNav = () => {
       collapsedWidth="0"
     >
       <Menu theme="dark" defaultSelectedKeys={["1"]} mode="inline">
-        <Menu.Item key="1" icon={<PieChartOutlined />}>
-          Dashboard
+        <Menu.Item key="1" icon={<HomeOutlined />}>
+        <Link to="/">Home</Link>
         </Menu.Item>
         <SubMenu key="sub1" icon={<AppstoreOutlined />} title="Admin">
           <Menu.Item icon={<UserOutlined />} key="2">
