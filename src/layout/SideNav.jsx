@@ -14,15 +14,9 @@ const { Sider } = Layout;
 const { SubMenu } = Menu;
 
 const SideNav = () => {
-  const [collapsed, setCollapsed] = useState(false);
-
-  const onCollapse = (collapsed) => {
-    setCollapsed(collapsed);
-  };
 
   return (
     <Sider
-      onCollapse={onCollapse}
       breakpoint="lg"
       collapsedWidth="0"
     >
