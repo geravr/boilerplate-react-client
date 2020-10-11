@@ -11,3 +11,17 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.logo {
+  padding: 1.24rem 1.5rem;
+}
+.logo a {
+  display: flex;
+}
+.logo span {
+  margin-left: 10px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 20px;
+  color: #f1f1f1;
+}
