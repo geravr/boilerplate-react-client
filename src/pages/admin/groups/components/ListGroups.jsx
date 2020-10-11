@@ -48,7 +48,7 @@ const ListGroups = ({
                 );
               }
               if (index > 5) {
-                return;
+                return null;
               }
               return (
                 <Tag color="geekblue" key={group}>
@@ -69,6 +69,7 @@ const ListGroups = ({
             <a
               style={{ color: "#000" }}
               onClick={() => showModalEdit(id, row.name)}
+              href="#"
             >
               <EditOutlined style={{ fontSize: "18px", color: "#ffc53d" }} />{" "}
               Editar
@@ -77,6 +78,7 @@ const ListGroups = ({
               id={id}
               name={row.name}
               fetchGroups={fetchGroups}
+              href="#"
             >
               <UserDeleteOutlined
                 style={{ fontSize: "18px", color: "#ff7a45" }}

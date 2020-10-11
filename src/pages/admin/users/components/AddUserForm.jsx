@@ -54,6 +54,7 @@ const AddUserForm = ({ modalAddUser, setModalAddUser, fetchUsers }) => {
       setGroupsPermissions(response.data.results);
     };
     fetchGroupsPermissions();
+    // eslint-disable-next-line
   }, []);
 
   return (

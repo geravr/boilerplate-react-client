@@ -69,6 +69,7 @@ const EditGroupForm = ({
     };
     fetchPermissions();
     fetchGroup();
+    // eslint-disable-next-line
   }, []);
 
   return (
