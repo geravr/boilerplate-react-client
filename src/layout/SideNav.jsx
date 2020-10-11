@@ -21,24 +21,22 @@ const SideNav = () => {
   };
 
   return (
-    <Sider collapsible collapsed={collapsed} onCollapse={onCollapse}>
-      <div className="logo" />
+    <Sider
+      onCollapse={onCollapse}
+      breakpoint="lg"
+      collapsedWidth="0"
+    >
       <Menu theme="dark" defaultSelectedKeys={["1"]} mode="inline">
         <Menu.Item key="1" icon={<PieChartOutlined />}>
-        <Link to="/">
           Dashboard
-          </Link>
         </Menu.Item>
         <SubMenu key="sub1" icon={<AppstoreOutlined />} title="Admin">
-            <Menu.Item icon={<UserOutlined />} key="2">
-          <Link to="/admin/users">
-              Usuarios
-          </Link>
-            </Menu.Item>
+          <Menu.Item icon={<UserOutlined />} key="2">
+            <Link to="/admin/users">Usuarios</Link>
+          </Menu.Item>
           <Menu.Item icon={<TeamOutlined />} key="3">
-          <Link to="/admin/groups">
+            <Link to="/admin/groups"></Link>
             Grupos
-            </Link>
           </Menu.Item>
         </SubMenu>
       </Menu>
