@@ -131,23 +131,21 @@ const EditUserForm = ({
             <Col span={10}>
               <Form.Item
                 name={["user", "is_active"]}
-                initialValue={true}
                 label="Usuario activo"
                 labelCol={{ span: 16 }}
                 wrapperCol={{ span: 4 }}
               >
-                <Switch defaultChecked />
+                <Switch defaultChecked={user && user.user.is_active} />
               </Form.Item>
             </Col>
             <Col span={10}>
               <Form.Item
                 name={["user", "is_staff"]}
-                initialValue={false}
                 label="Es administrador"
                 labelCol={{ span: 16 }}
                 wrapperCol={{ span: 4 }}
               >
-                <Switch />
+                <Switch defaultChecked={user && user.user.is_staff} />
               </Form.Item>
             </Col>
           </Row>
