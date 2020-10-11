@@ -13,6 +13,7 @@ import EditGroupForm from "../components/EditGroupForm";
 const GroupsContainer = () => {
   /*************** States ***************/
   const [groups, setGroups] = useState([]);
+  const [loadingGroups, setLoadingGroups] = useState(false);
   const [totalItems, setTotalItems] = useState(0);
   const [currentPagePagination, setCurrentPagePagination] = useState(1);
   const [modalAddGroup, setModalAddGroup] = useState(false);
@@ -32,12 +33,14 @@ const GroupsContainer = () => {
   };
 
   const fetchGroups = async () => {
+    setLoadingGroups(true);
     const response = await axiosClient.get(
       `auth/groups/?page=${currentPagePagination}`
     );
     const { count, results } = response.data;
     setGroups(results);
     setTotalItems(count);
+    setLoadingGroups(false);
   };
 
   const onChangePagination = (page, pageSize) => {
@@ -87,6 +90,7 @@ const GroupsContainer = () => {
             <Col span={24}>
               <ListGroups
                 groups={groups}
+                loadingGroups={loadingGroups}
                 totalItems={totalItems}
                 onChangePagination={onChangePagination}
                 fetchGroups={fetchGroups}

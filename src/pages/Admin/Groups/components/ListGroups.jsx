@@ -12,6 +12,7 @@ import DeleteGroup from "./DeleteGroup";
 
 const ListGroups = ({
   groups,
+  loadingGroups,
   totalItems,
   onChangePagination,
   fetchGroups,
@@ -20,6 +21,7 @@ const ListGroups = ({
   return (
     <Table
       dataSource={groups}
+      loading={loadingGroups}
       rowKey="id"
       pagination={{ total: totalItems, onChange: onChangePagination }}
       scroll={{x: true}}
