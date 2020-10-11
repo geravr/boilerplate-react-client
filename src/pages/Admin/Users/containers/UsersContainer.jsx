@@ -12,7 +12,8 @@ import EditUserForm from "../components/EditUserForm";
 
 const UsersContainer = () => {
   /*************** States ***************/
-  const [dataUsers, setDataUsers] = useState([]);
+  const [users, setUsers] = useState([]);
+  const [loadingUsers, setLoadingUsers] = useState(false);
   const [totalItems, setTotalItems] = useState(0);
   const [currentPagePagination, setCurrentPagePagination] = useState(1);
   const [modalAddUser, setModalAddUser] = useState(false);
@@ -32,12 +33,14 @@ const UsersContainer = () => {
   };
 
   const fetchUsers = async () => {
+    setLoadingUsers(true);
     const response = await axiosClient.get(
       `auth/users/?page=${currentPagePagination}`
     );
     const { count, results } = response.data;
-    setDataUsers(results);
+    setUsers(results);
     setTotalItems(count);
+    setLoadingUsers(false);
   };
 
   const onChangePagination = (page, pageSize) => {
@@ -86,11 +89,12 @@ const UsersContainer = () => {
           <Row>
             <Col span={24}>
               <ListUsers
-                dataUsers={dataUsers}
+                users={users}
                 totalItems={totalItems}
                 onChangePagination={onChangePagination}
                 fetchUsers={fetchUsers}
                 showModalEdit={showModalEdit}
+                loadingUsers={loadingUsers}
               />
             </Col>
           </Row>

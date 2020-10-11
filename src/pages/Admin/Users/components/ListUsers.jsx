@@ -13,7 +13,8 @@ import {
 import DeleteUser from "./DeleteUser";
 
 const ListUsers = ({
-  dataUsers,
+  users,
+  loadingUsers,
   totalItems,
   onChangePagination,
   fetchUsers,
@@ -21,7 +22,8 @@ const ListUsers = ({
 }) => {
   return (
     <Table
-      dataSource={dataUsers}
+      dataSource={users}
+      loading={loadingUsers}
       rowKey="id"
       pagination={{ total: totalItems, onChange: onChangePagination }}
       scroll={{x: true}}
