@@ -166,6 +166,7 @@ const AddUserForm = ({ modalAddUser, setModalAddUser, fetchUsers }) => {
             allowClear
             style={{ width: "100%" }}
             placeholder="Selecciona un grupo"
+            loading={groupsPermisions.length === 0}
           >
             {groupsPermisions.map((group) => (
               <Select.Option key={group.id} value={group.name}>
