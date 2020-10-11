@@ -44,6 +44,7 @@ const ListUsers = ({
         title="Activo"
         dataIndex="is_active"
         key="is_active"
+        align="center"
         render={(is_active) => (
           <>
             {is_active ? (
@@ -59,6 +60,7 @@ const ListUsers = ({
         title="Admin"
         dataIndex="is_staff"
         key="is_staff"
+        align="center"
         render={(is_staff) => (
           <>
             {is_staff ? (
