@@ -14,6 +14,7 @@ import {
   Input,
   Switch,
   Select,
+  Skeleton,
 } from "antd";
 
 const EditUserForm = ({
@@ -75,7 +76,9 @@ const EditUserForm = ({
       onCancel={handleCancel}
       footer={null}
     >
-      {user && (
+      {!user ? (
+        <Skeleton active paragraph={{ rows: 8 }} />
+      ) : (
         <Form
           labelCol={{ span: 6 }}
           wrapperCol={{ span: 18 }}
@@ -121,10 +124,7 @@ const EditUserForm = ({
           >
             <Input />
           </Form.Item>
-          <Form.Item
-            name={["user", "password"]}
-            label="Contraseña"
-          >
+          <Form.Item name={["user", "password"]} label="Contraseña">
             <Input.Password />
           </Form.Item>
           <Row>
