@@ -12,7 +12,7 @@ import EditGroupForm from "../components/EditGroupForm";
 
 const GroupsContainer = () => {
   /*************** States ***************/
-  const [dataGroups, setDataGroups] = useState([]);
+  const [groups, setGroups] = useState([]);
   const [totalItems, setTotalItems] = useState(0);
   const [currentPagePagination, setCurrentPagePagination] = useState(1);
   const [modalAddGroup, setModalAddGroup] = useState(false);
@@ -36,7 +36,7 @@ const GroupsContainer = () => {
       `auth/groups/?page=${currentPagePagination}`
     );
     const { count, results } = response.data;
-    setDataGroups(results);
+    setGroups(results);
     setTotalItems(count);
   };
 
@@ -86,7 +86,7 @@ const GroupsContainer = () => {
           <Row>
             <Col span={24}>
               <ListGroups
-                dataGroups={dataGroups}
+                groups={groups}
                 totalItems={totalItems}
                 onChangePagination={onChangePagination}
                 fetchGroups={fetchGroups}
