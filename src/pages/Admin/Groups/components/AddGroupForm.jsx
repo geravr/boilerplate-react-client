@@ -101,6 +101,7 @@ const AddGroupForm = ({ modalAddGroup, setModalAddGroup, fetchGroups }) => {
             allowClear
             style={{ width: "100%" }}
             placeholder="Selecciona un permiso"
+            loading={permissions.length === 0}
           >
             {permissions.map((permission) => (
               <Select.Option key={permission.id} value={permission.name}>
