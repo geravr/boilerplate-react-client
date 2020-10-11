@@ -81,7 +81,11 @@ const AddUserForm = ({ modalAddUser, setModalAddUser, fetchUsers }) => {
         >
           <Input />
         </Form.Item>
-        <Form.Item name={["user", "last_name"]} label="Apellido(s)">
+        <Form.Item
+          name={["user", "last_name"]}
+          label="Apellido(s)"
+          initialValue=""
+        >
           <Input />
         </Form.Item>
         <Form.Item
