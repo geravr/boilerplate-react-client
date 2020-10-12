@@ -16,7 +16,7 @@ const ListGroups = ({
   totalItems,
   onChangePagination,
   fetchGroups,
-  showModalEdit,
+  showModalEditGroup,
 }) => {
   return (
     <Table
@@ -68,7 +68,7 @@ const ListGroups = ({
           <Space size="middle">
             <a
               style={{ color: "#000" }}
-              onClick={() => showModalEdit(id, row.name)}
+              onClick={() => showModalEditGroup(id, row.name)}
               href="#"
             >
               <EditOutlined style={{ fontSize: "18px", color: "#ffc53d" }} />{" "}

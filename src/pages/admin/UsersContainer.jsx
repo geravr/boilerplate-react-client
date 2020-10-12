@@ -1,14 +1,16 @@
 import React, { useState, useEffect } from "react";
-import axiosClient from "./../../../../config/axios";
+
+// Axios
+import axiosClient from "../../config/axios";
 
 // Ant Design
 import { Row, Col, Button } from "antd";
 import { UserAddOutlined } from "@ant-design/icons";
 
 // Components
-import ListUsers from "../components/ListUsers";
-import AddUserForm from "../components/AddUserForm";
-import EditUserForm from "../components/EditUserForm";
+import ListUsers from "../../components/admin/users/ListUsers";
+import AddUserForm from "../../components/admin/users/AddUserForm";
+import EditUserForm from "../../components/admin/users/EditUserForm";
 
 const UsersContainer = () => {
   /*************** States ***************/

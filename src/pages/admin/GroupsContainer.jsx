@@ -1,14 +1,16 @@
 import React, { useState, useEffect } from "react";
-import axiosClient from "./../../../../config/axios";
+
+// Axios
+import axiosClient from "../../config/axios";
 
 // Ant Design
 import { Row, Col, Button } from "antd";
 import { TeamOutlined } from "@ant-design/icons";
 
 // Components
-import ListGroups from "../components/ListGroups";
-import AddGroupForm from "../components/AddGroupForm";
-import EditGroupForm from "../components/EditGroupForm";
+import ListGroups from "../../components/admin/groups/ListGroups";
+import AddGroupForm from "../../components/admin/groups/AddGroupForm";
+import EditGroupForm from "../../components/admin/groups/EditGroupForm";
 
 const GroupsContainer = () => {
   /*************** States ***************/
@@ -21,10 +23,10 @@ const GroupsContainer = () => {
   const [groupToEdit, setGroupToEdit] = useState(null);
 
   /*************** Functions ***************/
-  const showModalAdd = () => {
+  const showModalAddGroup = () => {
     setModalAddGroup(true);
   };
-  const showModalEdit = (id, name) => {
+  const showModalEditGroup = (id, name) => {
     setModalEditGroup(true);
     setGroupToEdit({
       id,
@@ -80,7 +82,7 @@ const GroupsContainer = () => {
                 type="primary"
                 shape="round"
                 icon={<TeamOutlined />}
-                onClick={showModalAdd}
+                onClick={showModalAddGroup}
               >
                 Nuevo grupo
               </Button>
@@ -94,7 +96,7 @@ const GroupsContainer = () => {
                 totalItems={totalItems}
                 onChangePagination={onChangePagination}
                 fetchGroups={fetchGroups}
-                showModalEdit={showModalEdit}
+                showModalEditGroup={showModalEditGroup}
               />
             </Col>
           </Row>

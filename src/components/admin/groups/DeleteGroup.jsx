@@ -1,6 +1,7 @@
 import React from "react";
 
-import axiosClient from "../../../../config/axios";
+// Axios
+import axiosClient from "../../../config/axios";
 
 import { Modal } from "antd";
 import { ExclamationCircleOutlined } from "@ant-design/icons";

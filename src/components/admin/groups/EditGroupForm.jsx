@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 
 // Axios
-import axiosClient from "../../../../config/axios";
+import axiosClient from "../../../config/axios";
 
 // Ant Design
 import {
