@@ -18,14 +18,19 @@ const { SubMenu } = Menu;
 const SideNav = () => {
   let { pathname: pathLocation } = useLocation();
 
+    const listPathlocation = pathLocation.split("/");
+
   return (
-    <Sider
-      breakpoint="lg"
-      collapsedWidth="0"
-    >
-      <Menu theme="dark" defaultSelectedKeys={["/"]} selectedKeys={[pathLocation]} mode="inline">
+    <Sider breakpoint="lg" collapsedWidth="0">
+      <Menu
+        theme="dark"
+        defaultSelectedKeys={["/"]}
+        selectedKeys={[pathLocation]}
+        defaultOpenKeys={[`/${listPathlocation[1]}`]}
+        mode="inline"
+      >
         <Menu.Item key="/" icon={<HomeOutlined />}>
-        <Link to="/">Home</Link>
+          <Link to="/">Home</Link>
         </Menu.Item>
         <SubMenu key="/admin" icon={<AppstoreOutlined />} title="Admin">
           <Menu.Item icon={<UserOutlined />} key="/admin/users">
