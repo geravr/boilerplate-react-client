@@ -17,16 +17,14 @@ import {
   Skeleton,
 } from "antd";
 
-const EditUserForm = ({
-  modalEditUser,
-  setModalEditUser,
-  fetchUsers,
-  userToEdit,
-}) => {
+const EditUserForm = (props) => {
   /*************** States ***************/
   const [updateUserLoading, setUpdateUserLoading] = useState(false);
   const [groupsPermisions, setGroupsPermissions] = useState([]);
   const [user, setUser] = useState(null);
+
+  /*************** Destructuring ***************/
+  const { modalEditUser, setModalEditUser, fetchUsers, userToEdit } = props;
 
   /*************** Validations ***************/
   const validateMessages = {
