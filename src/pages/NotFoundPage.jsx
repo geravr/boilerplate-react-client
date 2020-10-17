@@ -11,8 +11,8 @@ const NotFoundPage = () => {
     <Result
       status="404"
       title="404"
-      subTitle="Sorry, the page you visited does not exist."
-      extra={<Link to="/"><Button type="primary">Back Home</Button></Link>}
+      subTitle="Lo sentimos, la página que visitaste no existe."
+      extra={<Link to="/"><Button type="primary">Regresar al inicio</Button></Link>}
     />
   );
 };
