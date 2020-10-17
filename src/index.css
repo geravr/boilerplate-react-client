@@ -19,9 +19,9 @@ code {
   display: flex;
 }
 .logo span {
+  display: flex;
+  align-items: center;
   margin-left: 10px;
   font-weight: 700;
-  font-size: 20px;
   line-height: 20px;
-  color: #f1f1f1;
 }
