@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from "react";
 
 // Axios
-import axiosClient, { setToken } from "../config/axios";
+import axiosClient from "../config/axios";
 import { fetchCurrentUser, isLogin } from "../utils/isLogin";
+
+// Utils
+import { setToken } from "../utils/tokenLocalStorage";
 
 // Router
 import { useHistory } from 'react-router-dom';
