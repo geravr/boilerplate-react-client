@@ -25,7 +25,7 @@ const LoginContainer = () => {
   /*************** Functions ***************/
   const history = useHistory();
   
-  const onFinish = async (values) => {
+  const handleSubmit = async (values) => {
     try {
       const response = await axiosClient.post(
         "auth/token/obtain/",
@@ -57,7 +57,7 @@ const LoginContainer = () => {
         <Row>
           <Col>
             <LoginForm
-              onFinish={onFinish}
+              handleSubmit={handleSubmit}
               errorMessage={errorMessage}
               setErrorMessage={setErrorMessage}
             />
