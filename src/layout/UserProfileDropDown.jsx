@@ -12,12 +12,12 @@ const UserProfileDropDown = () => {
   const menu = (
     <Menu>
       <Menu.Item disabled>
-        <a>
+        <a href="foo">
           username
         </a>
       </Menu.Item>
       <Menu.Item onClick={logout}>
-        <a>
+        <a href="foo">
           Cerrar sesión
         </a>
       </Menu.Item>
