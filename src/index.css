@@ -25,3 +25,10 @@ code {
   font-weight: 700;
   line-height: 20px;
 }
+
+.user-avatar {
+  padding-right: 1.5rem;
+}
+.user-avatar span {
+  cursor: pointer;
+}
