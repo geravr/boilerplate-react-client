@@ -2,24 +2,22 @@ import React from "react";
 
 // Utils
 import logout from "../utils/logout";
+import { getUser } from "../utils/userLocalStorage";
 
 // Ant Design
 import { Menu, Dropdown, Avatar } from "antd";
 import { UserOutlined } from "@ant-design/icons";
 
 const UserProfileDropDown = () => {
+  const username = getUser("usrnm");
 
   const menu = (
     <Menu>
-      <Menu.Item disabled>
-        <a href="foo">
-          username
-        </a>
+      <Menu.Item style={{ color: "#969696", cursor: "default" }}>
+        {username}
       </Menu.Item>
       <Menu.Item onClick={logout}>
-        <a href="foo">
-          Cerrar sesión
-        </a>
+        Cerrar sesión
       </Menu.Item>
     </Menu>
   );
