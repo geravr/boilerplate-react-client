@@ -1,7 +1,9 @@
 import React from "react";
 
+import { isLogin } from "../utils/isLogin";
+
 // Router
-import { Route } from "react-router-dom";
+import { Route, Redirect } from "react-router-dom";
 
 // Components
 import Layout from "../layout/Layout";
@@ -10,11 +12,17 @@ const PrivateRoute = (props) => {
   const { component: Component, path } = props;
 
   return (
-    <Route path={path}>
-      <Layout>
-        <Component />
-      </Layout>
-    </Route>
+    <>
+      {isLogin() ? (
+        <Route path={path}>
+          <Layout>
+            <Component />
+          </Layout>
+        </Route>
+      ) : (
+        <Redirect to="/login" />
+      )}
+    </>
   );
 };
 
