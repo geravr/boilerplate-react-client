@@ -23,6 +23,7 @@ const AddUserForm = ({ modalAddUser, setModalAddUser, fetchUsers }) => {
 
   /*************** Validations ***************/
   const validateMessages = {
+    // eslint-disable-next-line
     required: "${label} es requerido!",
     types: {
       email: "No es un email válido!",
