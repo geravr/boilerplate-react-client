@@ -24,7 +24,7 @@ export const initAxiosInterceptors = () => {
     return config;
   });
 
-  // Axios Interceptors
+  /*************** Interceptors ***************/
   axiosClient.interceptors.response.use(
     function (response) {
       return response;
@@ -70,8 +70,6 @@ export const initAxiosInterceptors = () => {
           return Promise.reject(error);
         }
       } else {
-        deleteUser();
-        window.location = "/login";
         return Promise.reject(error);
       }
     }
