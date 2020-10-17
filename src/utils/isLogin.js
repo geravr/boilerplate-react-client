@@ -1,6 +1,5 @@
-import axiosClient, { setUser, getUser, getAccessToken } from "../config/axios";
-
-const token = getAccessToken();
+import axiosClient from "../config/axios";
+import { setUser, getUser } from "./userLocalStorage";
 
 export const fetchCurrentUser = async () => {
     try {
