@@ -26,6 +26,7 @@ const GroupsContainer = () => {
   const showModalAddGroup = () => {
     setModalAddGroup(true);
   };
+  
   const showModalEditGroup = (id, name) => {
     setModalEditGroup(true);
     setGroupToEdit({
